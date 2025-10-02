@@ -1,11 +1,7 @@
 import axios from 'axios';
 import {Direction, Page, PageParams, Sort} from '@/types/type';
 import type {Prompt} from '@/app/admin/prompts/types';
-
-export interface GetPromptsResponse {
-  prompts: Prompt[];
-  totalPages: number;
-}
+import {GetPromptsResponse} from "@/lib/services/admin/prompts/type";
 
 export async function getPrompts(
     pageParams: PageParams = {page: 0, size: 10, sort: Sort.CREATED_AT, direction: Direction.DESC},
